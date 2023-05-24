@@ -10,13 +10,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name : "Checking the repository"
+    - name : Checking the repository
       uses: actions/checkout@v2
 
-    - name: "Set up java"
-      uses: actions/setup-java@v2
-      with:
-        java-version : '20.0.1'
+    - name : Setup Gradle
+      uses: gradle/gradle-build-action@v2
 
-    - name : "Build Project"
+    - name : Build Project
       run : ./gradlew build
