@@ -17,7 +17,7 @@ jobs:
       uses: gradle/gradle-build-action@v2
 
     - name : Change directory
-      run : cd Desktop\Sahaj-Preparations\"demo (1)"\demo
+      run : cd User-CRUD-micronaut
 
     - name : Build Project
       run :  gradlew.bat build
