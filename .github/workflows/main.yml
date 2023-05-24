@@ -1,0 +1,22 @@
+name : "User CRUD operation"
+
+on :
+  push:
+    branches: [ main ]
+
+jobs:
+  build :
+
+    runs-on: windows-latest
+
+    steps:
+    - name : "Checking the repository"
+      uses: actions/checkout@v2
+
+    - name: "Set up java"
+      uses: actions/setup-java@v2
+      with:
+        java-version : 20
+
+    - name : "Build Project"
+      run : ./gradlew build
