@@ -17,9 +17,6 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version : '20.0.1'
-        distribution: 'jdk'
-        architecture: 'x64'
-        check-latest: false
 
     - name : "Build Project"
       run : ./gradlew build
