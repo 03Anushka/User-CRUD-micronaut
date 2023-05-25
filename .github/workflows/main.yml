@@ -16,6 +16,9 @@ jobs:
     - name : Setup Gradle
       uses: gradle/gradle-build-action@v2
 
+    - name : Chage the directory
+      run : cd Desktop/"Sahaj-Preparations"/"demo (1)"/demo
+
     - name : Give execute permission
       run : chmod +x gradlew
 
