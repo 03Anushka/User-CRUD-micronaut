@@ -1,26 +1,24 @@
-name : "User CRUD operation"
+name: "User CRUD operation"
 
-on :
+on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  build :
-
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name : Checking the repository
-      uses: actions/checkout@v2
+      - name: Checking out the repository
+        uses: actions/checkout@v2
 
-    - name : Setup Gradle
-      uses: gradle/gradle-build-action@v2
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 'adopt@1.11'
 
-    - name : Chage the directory
-      run : cd Desktop/"Sahaj-Preparations"/"demo (1)"/demo
-
-    - name : Give execute permission
-      run : chmod +x gradlew
-
-    - name : Build Project
-      run :  ./gradlew build
+      - name: Build Project
+        run: |
+          cd Desktop/"Sahaj-Preparations"/"demo (1)"/demo
+          chmod +x gradlew
+          ./gradlew build
