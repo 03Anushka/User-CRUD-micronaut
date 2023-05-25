@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: 'adopt@1.11'
+          distribution: 'adopt'
+
 
       - name: Build Project
         run: |
