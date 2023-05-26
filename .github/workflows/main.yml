@@ -16,10 +16,5 @@ jobs:
       - name : Setup Gradle
         uses: gradle/gradle-build-action@v2
 
-      - name : Change directory
-        run : |
-              pwd
-              cd Desktop\Sahaj-Preparations\"demo (1)"\demo
-
       - name : Build Project
         run :  gradlew.bat build
